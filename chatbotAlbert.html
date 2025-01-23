@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot with Albert - Aplicativo Android</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .reference-text {
+            background-color: #f8f9fa;
+            border-left: 5px solid #007bff;
+            padding: 15px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portfólio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#descricao">Descrição</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais Técnicos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#exemplo">Exemplo de Uso</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#demonstracao">Demonstração</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Descrição -->
+    <section id="descricao" class="py-5 text-center">
+        <div class="container">
+            <h2>Chatbot with Albert - Aplicativo Android</h2>
+            <p>O <strong>Chatbot with Albert</strong> é um aplicativo inovador que traz a funcionalidade de um chatbot autônomo diretamente para o dispositivo Android, eliminando a necessidade de um servidor ou conexão com a internet.</p>
+            <p>Com ele, empresas podem oferecer respostas rápidas e precisas aos seus clientes, configurando um texto de referência personalizado.</p>
+        </div>
+    </section>
+
+    <!-- Diferenciais Técnicos -->
+    <section id="diferenciais" class="py-5 bg-light text-center">
+        <div class="container">
+            <h3>Diferenciais Técnicos</h3>
+            <ul class="list-unstyled">
+                <li><strong>Ambiente de Desenvolvimento:</strong> Android Studio 2024.2.1 Ladybug</li>
+                <li><strong>Linguagem de Programação:</strong> Kotlin com arquitetura MVVM e Clean Code</li>
+                <li><strong>Execução Offline:</strong> O aplicativo opera 100% offline, direto no dispositivo.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="py-5 text-center">
+        <div class="container">
+            <h3>Funcionalidades</h3>
+            <ul class="list-unstyled">
+                <li><strong>Execução Offline:</strong> Funciona sem necessidade de conexão à internet.</li>
+                <li><strong>Texto de Referência Personalizável:</strong> Configure facilmente o chatbot com informações específicas.</li>
+                <li><strong>Entendimento de Linguagem Natural:</strong> Utiliza o modelo <strong>Albert</strong> em TensorFlow Lite para respostas realistas e contextuais.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Exemplo de Uso -->
+    <section id="exemplo" class="py-5 bg-light text-center">
+        <div class="container">
+            <h3>Exemplo de Uso</h3>
+            <p>No exemplo do uso deste aplicativo, foi usado o seguinte texto como referência:</p>
+            <div class="reference-text">
+                <p><strong>Bem-vindo à Nossa Pizzaria!</strong></p>
+                <p><strong>Horário de Funcionamento:</strong><br>
+                Loja: das 9h às 18h.<br>
+                Entregas: das 9h às 22h.</p>
+                <p><strong>🍕 Nossas Pizzas:</strong><br>
+                1. Calabresa – R$ 42,00<br>
+                2. Portuguesa – R$ 40,00<br>
+                3. Marguerita – R$ 50,00</p>
+                <p><strong>🍹 Bebidas:</strong> Refrigerantes, sucos e muito mais!</p>
+            </div>
+            <p>Exemplos de perguntas:</p>
+            <ul class="list-unstyled">
+                <li><strong>Pergunta:</strong> "Qual é o preço da pizza Portuguesa?"</li>
+                <li><strong>Resposta:</strong> "O preço da pizza Portuguesa é R$ 40,00."</li>
+                <li><strong>Pergunta:</strong> "Qual é o horário de funcionamento da pizzaria?"</li>
+                <li><strong>Resposta:</strong> "A loja funciona das 9h às 18h, e as entregas acontecem das 9h às 22h."</li>
+                <li><strong>Pergunta:</strong> "O que tem na pizza Portuguesa?"</li>
+                <li><strong>Resposta:</strong> "A pizza Portuguesa leva ovos, cebola, azeitona, ervilha, queijo e presunto."</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Demonstração -->
+    <section id="demonstracao" class="py-5 text-center">
+        <div class="container">
+            <h3>Demonstração do Aplicativo</h3>
+            <p>Confira a demonstração do funcionamento do aplicativo no vídeo abaixo:</p>
+            <div class="ratio ratio-16x9">
+                <iframe src="https://www.youtube.com/embed/K9-55jDTheE" title="Demonstração do Chatbot com Albert" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub -->
+    <section id="github" class="py-5 bg-light text-center">
+        <div class="container">
+            <h3>Repositório no GitHub</h3>
+            <p>Confira o código-fonte completo do projeto no repositório:</p>
+            <a href="https://github.com/calbertobarbosajr/Chatbot/tree/main" class="btn btn-dark" target="_blank">Ver no GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

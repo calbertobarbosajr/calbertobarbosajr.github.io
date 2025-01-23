@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimizando Custos - Android</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Estilo para limitar o tamanho das imagens */
+        .project-images img {
+            max-width: 100%;
+            height: auto;
+            max-height: 300px; /* Limita a altura máxima das imagens */
+            object-fit: contain;
+            cursor: pointer; /* Mostra que a imagem é clicável */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portfólio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#descricao">Descrição</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estrutura">Estrutura do Aplicativo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#conceitos">Conceitos Chave</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Descrição -->
+    <section id="descricao" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Minimizando Custos - Android</h2>
+            <p>Este aplicativo simula um ambiente de gestão empresarial, onde o objetivo é minimizar custos e maximizar receitas.</p>
+            <p>Utilizando Inteligência Artificial (Thompson Sampling), o aplicativo automatiza a tomada de decisões em controle de estoque, promoções, produção e gestão financeira. Ele também permite estratégias manuais para comparação.</p>
+            <div class="row project-images">
+                <div class="col-md-6">
+                    <img src="minimizingCosts/minimizingCosts.png" alt="Imagem 1 do aplicativo" class="img-fluid rounded" data-bs-toggle="modal" data-bs-target="#zoomModal1">
+                </div>
+                <div class="col-md-6">
+                    <img src="minimizingCosts/minimizingCosts2.png" alt="Imagem 2 do aplicativo" class="img-fluid rounded" data-bs-toggle="modal" data-bs-target="#zoomModal2">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal 1 -->
+    <div class="modal fade" id="zoomModal1" tabindex="-1" aria-labelledby="zoomModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="zoomModalLabel1">Imagem 1</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="imagem1.jpg" alt="Zoom Imagem 1 do aplicativo" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="zoomModal2" tabindex="-1" aria-labelledby="zoomModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="zoomModalLabel2">Imagem 2</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="imagem2.jpg" alt="Zoom Imagem 2 do aplicativo" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="py-5 text-center">
+        <div class="container">
+            <h3>Funcionalidades do Aplicativo</h3>
+            <ul class="list-unstyled">
+                <li><strong>Simulação de Negócios:</strong> Gerencie custos fixos/variáveis, vendas, promoções e níveis de estoque.</li>
+                <li><strong>Decisões Baseadas em IA:</strong> Automação com Thompson Sampling para tomadas de decisão.</li>
+                <li><strong>Estratégia Manual:</strong> Simula estratégias tradicionais com ajustes manuais.</li>
+                <li><strong>Alertas:</strong> Notificações em tempo real para estoque baixo ou fluxo de caixa crítico.</li>
+                <li><strong>Interface Moderna:</strong> Construída com Jetpack Compose, incluindo gráficos e controles interativos.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- GitHub -->
+    <section id="github" class="py-5 bg-light text-center">
+        <div class="container">
+            <h3>Repositório no GitHub</h3>
+            <p>Confira o código-fonte do projeto no repositório:</p>
+            <a href="https://github.com/calbertobarbosajr/Minimizing-Costs" class="btn btn-dark" target="_blank">Ver no GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
