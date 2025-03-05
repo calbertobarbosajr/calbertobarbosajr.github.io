@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Clone - Android</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Estilizando o carrossel para garantir que as imagens não fiquem muito grandes */
+        .carousel-item img {
+            max-height: 500px;
+            object-fit: contain;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Portfólio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#visao-geral">Visão Geral</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proximos-passos">Próximos Passos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Visão Geral -->
+    <section id="visao-geral" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>WhatsApp Clone - Android</h2>
+            <p>Este projeto é um clone funcional do WhatsApp, inicialmente desenvolvido como parte do curso <strong>"Desenvolvimento Android Completo - Crie 18 Apps"</strong> de Jamilton Damasceno.</p>
+            <p>O curso pode ser acessado através do link abaixo:</p>
+            <a href="https://www.udemy.com/course/curso-de-desenvolvimento-android-oreo/" class="btn btn-primary" target="_blank">Acesse o Curso</a>
+            <h4 class="mt-4">Principais Funcionalidades</h4>
+            <ul class="list-unstyled">
+                <li>✅ Enviar mensagens de texto e imagens</li>
+                <li>✅ Pesquisar contatos para iniciar conversas rapidamente</li>
+                <li>✅ Criar grupos para bate-papos coletivos</li>
+            </ul>
+            <p>Inicialmente, o projeto foi desenvolvido em Java, mas estou migrando o código para Kotlin. Essa transição permitirá, no futuro, a substituição da interface XML pelo Jetpack Compose, proporcionando um código mais moderno, declarativo e eficiente.</p>
+            <p>Quando o curso foi criado, Kotlin ainda estava em desenvolvimento, e o Jetpack Compose provavelmente não existia. Por isso, estou atualizando o projeto para incorporar as melhores práticas da atualidade.</p>
+        </div>
+    </section>
+
+    <!-- Tecnologias Utilizadas -->
+    <section id="tecnologias" class="py-5 text-center">
+        <div class="container">
+            <h3>Tecnologias Utilizadas</h3>
+            <ul class="list-unstyled">
+                <li>⚡ <strong>Kotlin</strong> (em progresso, migrando do Java)</li>
+                <li>📦 <strong>Firebase</strong> (Storage, Firestore Database e Authentication)</li>
+                <li>🖥 <strong>Jetpack Compose</strong> (planejado para o futuro)</li>
+                <li>🛠 <strong>Arquitetura MVVM</strong> (implementação futura)</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Próximos Passos -->
+    <section id="proximos-passos" class="py-5 bg-light text-center">
+        <div class="container">
+            <h3>Próximos Passos</h3>
+            <p>Além da migração para Kotlin, o projeto será aprimorado com:</p>
+            <ul class="list-unstyled">
+                <li>✔ Implementação de boas práticas S.O.L.I.D para um código mais modular</li>
+                <li>✔ Uso da arquitetura MVVM para separação de responsabilidades</li>
+                <li>✔ Substituição da interface XML pelo <strong>Jetpack Compose</strong></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Galeria de Capturas de Tela -->
+    <section id="galeria" class="py-5 text-center">
+        <div class="container">
+            <h3>Galeria de Capturas de Tela</h3>
+            <p>Veja algumas imagens do funcionamento do aplicativo:</p>
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="Interactus/interactus01.png" class="d-block w-100" alt="Tela de Conversa">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="Interactus/interactus02.png" class="d-block w-100" alt="Lista de Contatos">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="screenshot3.jpg" class="d-block w-100" alt="Tela de Grupos">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub -->
+    <section id="github" class="py-5 bg-light text-center">
+        <div class="container">
+            <h3>Repositório no GitHub</h3>
+            <p>Confira o código-fonte do projeto no repositório:</p>
+            <a href="https://github.com/calbertobarbosajr/WhatsAppClone" class="btn btn-dark" target="_blank">Ver no GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
