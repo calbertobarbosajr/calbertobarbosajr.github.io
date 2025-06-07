@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cliente Android com Código - Chat TCP</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" />
+  <style>
+    pre code {
+      display: block;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      border-radius: 0.375rem;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+      <a class="navbar-brand" href="../index.html">Portfólio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projetos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Introdução -->
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h1 class="mb-4">Cliente Android com Código Kotlin</h1>
+    <p class="lead">Veja como é feito o cliente Android deste projeto de chat em tempo real, incluindo os principais trechos de código em Kotlin.</p>
+  </div>
+</section>
+
+<!-- Código Kotlin -->
+<section class="py-5">
+  <div class="container">
+    <h3>📱 Código Kotlin: MainActivity</h3>
+
+    <p>Estabelecendo a conexão e criando as threads:</p>
+    <pre><code class="language-kotlin">
+private lateinit var socket: Socket
+private lateinit var writer: PrintWriter
+private lateinit var reader: BufferedReader
+
+fun connectToServer(ip: String, port: Int) {
+    thread {
+        try {
+            socket = Socket(ip, port)
+            writer = PrintWriter(socket.getOutputStream(), true)
+            reader = BufferedReader(InputStreamReader(socket.getInputStream()))
+
+            runOnUiThread {
+                Toast.makeText(this, "Conectado ao servidor!", Toast.LENGTH_SHORT).show()
+            }
+
+            receiveMessages()
+
+        } catch (e: Exception) {
+            runOnUiThread {
+                Toast.makeText(this, "Erro: ${e.message}", Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+}
+    </code></pre>
+
+    <p>Thread para receber mensagens:</p>
+    <pre><code class="language-kotlin">
+fun receiveMessages() {
+    thread {
+        try {
+            var line: String?
+            while (reader.readLine().also { line = it } != null) {
+                runOnUiThread {
+                    txtMessages.append("Servidor: $line\n")
+                }
+            }
+        } catch (e: Exception) {
+            Log.e("Chat", "Erro ao receber mensagens", e)
+        }
+    }
+}
+    </code></pre>
+
+    <p>Enviando mensagem do botão:</p>
+    <pre><code class="language-kotlin">
+btnSend.setOnClickListener {
+    val message = edtMessage.text.toString()
+    thread {
+        writer.println(message)
+    }
+    edtMessage.text.clear()
+}
+    </code></pre>
+  </div>
+</section>
+
+<!-- Layout XML -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3>📄 Layout XML: activity_main.xml</h3>
+    <pre><code class="language-xml">
+&lt;LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"&gt;
+
+    &lt;TextView
+        android:id="@+id/txtMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Mensagens aqui..."
+        android:background="#EFEFEF"
+        android:padding="8dp" /&gt;
+
+    &lt;EditText
+        android:id="@+id/edtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Digite sua mensagem..." /&gt;
+
+    &lt;Button
+        android:id="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Enviar" /&gt;
+
+&lt;/LinearLayout&gt;
+    </code></pre>
+  </div>
+</section>
+
+<!-- GitHub -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h3>📂 Repositório GitHub</h3>
+    <p>Código completo com cliente + servidor:</p>
+    <a href="https://github.com/calbertobarbosajr/real-time-chat-server-client" class="btn btn-dark" target="_blank">Ver no GitHub</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
