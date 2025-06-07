@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack Event Management System with .NET Web API and Angular</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        /* Estilizando o carrossel para garantir que as imagens não fiquem muito grandes */
+        .carousel-item img {
+            max-height: 500px;
+            object-fit: contain;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Portfólio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#visao-geral">Visão Geral</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologias</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Visão Geral -->
+    <section id="visao-geral" class="py-5 bg-light text-center">
+        <div class="container">
+            <h2>Full Stack Event Management System with .NET Web API and Angular</h2>
+            <p>Este projeto foi desenvolvido como parte do curso <strong>"Torne-se um Desenvolvedor Full-Stack com .NET Web API e Angular + EF Core"</strong>, 
+                ministrado por Vinícius de Andrade na Udemy.</p>
+            <p>O curso pode ser acessado através do link abaixo:</p>
+            <a href="https://www.udemy.com/course/angular-dotnetcore-efcore/?couponCode=KEEPLEARNINGBR" class="btn btn-primary" target="_blank">Acesse o Curso</a>
+            <h4 class="mt-4">Visão Geral</h4>
+            <p>O projeto é um sistema completo de gerenciamento de eventos, utilizando uma API de maturidade nível 3 — o mais alto nível de maturidade para APIs REST, 
+                conforme ensinado no curso.
+            </p>
+            <p></p>
+            <p>Inicialmente, o sistema foi construído utilizando .NET 5 e SQLite. No entanto, estou atualizando gradualmente para:</p>
+            <ul class="list-unstyled">
+                <li>✔ .NET 9 (versão mais recente do framework);</li>
+                <li>✔ PostgreSQL como banco de dados, substituindo o SQLite.</li>
+            </ul>
+            <p>Essa atualização não é apenas técnica, mas também estratégica:</p>
+            <p>Optei por usar uma tecnologia diferente do curso para evitar apenas replicar o código do instrutor (copia e cola). Além disso, 
+                o uso da combinação ASP.NET + PostgreSQL, menos comum que ASP.NET + SQL Server
+            </p>
+            <p></p>
+            <p>A infraestrutura do PostgreSQL foi configurada utilizando Docker, garantindo maior escalabilidade e 
+facilidade de manutenção no ambiente de desenvolvimento.</p>
+        </div>
+    </section>
+
+    <!-- Tecnologias Utilizadas -->
+    <section id="tecnologias" class="py-5 text-center">
+        <div class="container">
+            <h3>Tecnologias Utilizadas</h3>
+            <ul class="list-unstyled">
+                <li>.NET 5 (em atualização para .NET 9)</li>
+                <li>EF Core</li>
+                <li>PostgreSQL (em substituição ao SQLite)</li>
+                <li>Angular</li>
+                <li>Reactive Forms</li>
+                <li>DTOs e Data Annotations</li>
+                <li>ASP.NET Core Identity para autenticação e autorização (JWT Token)</li>
+                <li>Swagger para documentação da API</li>
+                <li>Docker para gerenciamento do banco de dados PostgreSQL</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Funcionalidades -->
+    <section id="funcionalidades" class="py-5 bg-light text-center">
+        <div class="container">
+            <h3>Funcionalidades</h3>
+            <ul class="list-unstyled">
+                <li>Autenticação e autorização segura via JWT</li>
+                <li>Criação, atualização, consulta e exclusão de eventos</li>
+                <li>Paginação e filtros de pesquisa para otimizar consultas</li>
+                <li>Gestão de usuários e controle de acesso</li>
+                <li>Interface frontend responsiva utilizando Angular + Reactive Forms</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Galeria de Capturas de Tela -->
+    <section id="galeria" class="py-5 text-center">
+        <div class="container">
+            <h3>Galeria de Capturas de Tela</h3>
+            <p>Veja algumas imagens do funcionamento do aplicativo:</p>
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="SejaFullStackNETWebAPIAngularEFCore/Curso_Angular_ASPNET_Core_Web_API_Entity_Framework_Core_ASPNET_Core_Identity_Udemy..png" class="d-block w-100" alt="Tela de Conversa">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="SejaFullStackNETWebAPIAngularEFCore/fullStack2.png" class="d-block w-100" alt="Lista de Contatos">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="SejaFullStackNETWebAPIAngularEFCore/fullStack3.png" class="d-block w-100" alt="Tela de Grupos">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- GitHub -->
+    <section id="github" class="py-5 bg-light text-center">
+        <div class="container">
+            <h3>Repositório no GitHub</h3>
+            <p>Confira o código-fonte do projeto no repositório:</p>
+            <a href="https://github.com/calbertobarbosajr/Full-Stack-Event-Management-System-with-NET-Web-API-and-Angular" class="btn btn-dark" target="_blank">Ver no GitHub</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

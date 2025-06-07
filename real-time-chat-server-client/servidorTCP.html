@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servidor TCP em C - Projeto de Chat</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+      <a class="navbar-brand" href="../index.html">Portfólio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projetos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Descrição -->
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h1 class="mb-4">Servidor TCP em C</h1>
+    <p class="lead">Este servidor foi desenvolvido em linguagem C, utilizando a API de sockets da biblioteca padrão para gerenciar conexões TCP entre múltiplos clientes simultaneamente.</p>
+  </div>
+</section>
+
+<!-- Funcionamento -->
+<section class="py-5 text-start">
+  <div class="container">
+    <h3>📡 Como Funciona</h3>
+    <ul>
+      <li>Cria um socket usando `socket()`</li>
+      <li>Associa a uma porta com `bind()`</li>
+      <li>Escuta conexões com `listen()`</li>
+      <li>Aceita novos clientes com `accept()`</li>
+      <li>Utiliza `fork()` para lidar com múltiplas conexões ou `select()` para multiplexação</li>
+      <li>Comunicação bidirecional via `send()` e `recv()`</li>
+    </ul>
+
+    <h4 class="mt-4">🛠️ Recursos Utilizados</h4>
+    <ul>
+      <li>Bibliotecas: `<sys/socket.h>`, `<netinet/in.h>`, `<unistd.h>`, `<arpa/inet.h>`</li>
+      <li>Executável compatível com sistemas Linux (Ubuntu/Debian)</li>
+      <li>Compilação via `gcc -o servidor servidor.c`</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Demonstração -->
+<section class="py-5 bg-light text-center">
+  <div class="container">
+    <h3>🎥 Demonstração do Funcionamento</h3>
+    <div class="ratio ratio-16x9 mx-auto" style="max-width: 720px;">
+      <iframe src="https://www.youtube.com/embed/a_pSmMwX3h4" title="Demonstração do Servidor TCP" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- GitHub -->
+<section class="py-5 text-center">
+  <div class="container">
+    <h3>📂 Repositório GitHub</h3>
+    <p>Confira o código completo do servidor em:</p>
+    <a href="https://github.com/calbertobarbosajr/real-time-chat-server-client" target="_blank" class="btn btn-dark">Ver no GitHub</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

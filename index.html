@@ -1,303 +1,360 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio Profissional</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio Profissional</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    </head>
+    <body>
 
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Meu Portfólio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#articles">Artigos</a></li>
-                    <!-- <li class="nav-item"><a class="nav-link" href="#videos">Demonstrações</a></li> -->
-                    <li class="nav-item"><a class="nav-link" href="#books">Livros Publicados</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#social">Redes Sociais</a></li>                    
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">Meu Portfólio</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about">Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#articles">Artigos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#books">Livros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#social">Redes Sociais</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Apresentação -->
+        <section id="about" class="py-5 bg-light text-center">
+            <div class="container" data-aos="fade-down">
+                <div class="row align-items-center">
+                    <div class="col-md-4 mb-3">
+                        <img src="foto.jpg" alt="Foto Profissional de Carlos Alberto" class="img-fluid rounded-circle" width="200">
+                    </div>
+                    <div class="col-md-8">
+                        <h2>Sobre Mim</h2>
+                        <p>Sou Carlos Alberto, desenvolvedor Android e entusiasta de tecnologias emergentes. Especializado em Kotlin, Java, Python e IA. Meu objetivo é criar soluções digitais inovadoras que realmente façam a diferença.</p>
+                        <p>Além de projetos práticos, adoro compartilhar conhecimento através de artigos, GitHub e livros publicados na Amazon.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+        <!-- Projetos Relevantes -->
+        <section id="projects" class="py-5 text-center">
+            <div class="container" data-aos="fade-up">
+                <h2 class="mb-4">Projetos Relevantes</h2>
+
+                <!-- Android Projects -->
+                <h3 class="mb-4">Aplicativos Android (Kotlin/Java)</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="zoom-in">
+                        <div class="card h-100">
+                            <img src="MaximizingRevenues/maximizando2.png" class="card-img-top" alt="Maximizando Receita com IA Android">
+                            <div class="card-body">
+                                <h5 class="card-title">Maximizando Receita</h5>
+                                <p>Aplicativo Android baseado em Thompson Sampling para otimizar estratégias de vendas online.</p>
+                                <a href="MaximizingRevenues.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card h-100">
+                            <img src="minimizingCosts/minimizingCosts2.png" class="card-img-top" alt="Minimizando Custos App Android IA">
+                            <div class="card-body">
+                                <h5 class="card-title">Minimizando Custos</h5>
+                                <p>Simulador empresarial utilizando IA para reduzir custos operacionais e maximizar lucros.</p>
+                                <a href="minimizingCosts.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="card h-100">
+                            <img src="chatbot/chatbot.png" class="card-img-top" alt="Chatbot Offline com ALBERT">
+                            <div class="card-body">
+                                <h5 class="card-title">Chatbot com Albert</h5>
+                                <p>Chatbot Android offline usando o modelo Albert com personalização via texto de referência.</p>
+                                <a href="chatbotAlbert.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="card h-100">
+                            <img src="Interactus/interactus02.png" class="card-img-top" alt="Clone WhatsApp Android Studio">
+                            <div class="card-body">
+                                <h5 class="card-title">WhatsApp Clone</h5>
+                                <p>Clone funcional do WhatsApp com funcionalidades de grupos, envio de mensagens e imagens.</p>
+                                <a href="Interactus.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="card h-100">
+                            <img src="real-time-chat-server-client/Screenshot_20250524_151007.png" class="card-img-top" alt="Clone WhatsApp Android Studio">
+                            <div class="card-body">
+                                <h5 class="card-title">Real time chat server client</h5>
+                                <p>O objetivo deste projeto é demonstrar a comunicação de rede de baixo nível entre dispositivos Android e um servidor TCP personalizado, usando apenas recursos nativos das linguagens.</p>
+                                <a href="real-time-chat-server-client/real-time-chat-server-client.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- ASP.NET Projects -->
+                <h3 class="mb-4 mt-5">Aplicações ASP.NET (C#)</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-4" data-aos="zoom-in">
+                        <div class="card h-100">
+                            <img src="ASPNET/SejaFullStackNETWebAPIAngularEFCore/fullStack3.png" class="card-img-top" alt="Projeto ASP.NET API com Angular">
+                            <div class="card-body">
+                                <h5 class="card-title">Palestrantes e Redes Sociais</h5>
+                                <p>Backend ASP.NET Core Web API para gerenciamento de eventos e palestrantes, com autenticação integrada.</p>
+                                <a href="ASPNET/Curso_Angular_ASPNET_Core_Web_API_Entity_Framework_Core_ASPNET_Core_Identity_Udemy.html" class="btn btn-primary" target="_blank">Ver Projeto</a> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- C/C++ Projects -->
+                
+                <!-- <h3 class="mb-4 mt-5">Projetos em C/C++</h3>  -->
+                <h3 class="mb-4 mt-5"></h3>
+                
+                <div class="row">
+
+                    <!-- Card Em Desenvolvimento -->
+                    <!--
+                    <div class="col-md-4 mb-4" data-aos="zoom-in">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Em desenvolvimento...</h5>
+                                <p>Projetos utilizando C/C++ para sistemas embarcados, performance crítica e automação de baixo nível.</p>
+                                <a href="#" class="btn btn-secondary disabled">Aguardando Publicação</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="card h-100">
+                            <img src="C_C++/neural_simulation.png" class="card-img-top" alt="Simulador Neural C++">
+                            <div class="card-body">
+                                <h5 class="card-title">Simulador Neural em C++</h5>
+                                <p>Projeto de rede neural simples, utilizando apenas C++ moderno, sem frameworks externos.</p>
+                                <a href="Cpp/projetoNeuralC.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+                            </div>
+                        </div>
+                    </div>
+                     -->
+                </div>
+                
+
+            </div>
+            
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!-- Habilidades -->
+        <section id="skills" class="py-5 bg-light text-center">
+            <div class="container">
+                <h2 class="mb-4">Habilidades Técnicas</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>Linguagens de Programação</h5>
+                        <p>Python, Kotlin, Java, C/C++, C#</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Frameworks</h5>
+                        <p>Tensorflow, ASP.NET, Bootstrap</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Ferramentas</h5>
+                        <p>Git, Docker</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artigos -->
+        <section id="articles" class="py-5 text-center">
+            <div class="container">
+                <h2 class="mb-4">Artigos Técnicos</h2>
+                <p>Confira meus artigos na plataforma LinkedIn:</p>
+                <ul class="list-unstyled">
+                    <li><a href="https://www.linkedin.com/pulse/desvendando-os-mist%25C3%25A9rios-dos-coment%25C3%25A1rios-c-da-arte-de-barbosa-junior/?trackingId=6BgbnkzwSjWV0xqi1CM80w%3D%3D" target="_blank">Escrevendo Código de Alta Qualidade: Impacto, Padrões e Princípios</a></li>
+                    <li><a href="https://www.linkedin.com/pulse/dominando-programa%25C3%25A7%25C3%25A3o-orientada-objetos-da-teoria-%25C3%25A0-barbosa-junior-mux2f/?trackingId=u33wvrZmQIaFRpkmTNXvVA%3D%3D" target="_blank">Dominando a Programação Orientada a Objetos: Da Teoria à Prática em Projetos Reais</a></li>
+                    <li><a href="https://www.linkedin.com/pulse/desvendando-arquitetura-limpa-desenvolvimento-android-barbosa-junior-hnrhf/?trackingId=u33wvrZmQIaFRpkmTNXvVA%3D%3D
+                           " target="_blank">
+                            Desvendando a Arquitetura Limpa no Desenvolvimento Android: Uma Revolução para o Sucesso</a></li>
+                    <li><a href="https://www.linkedin.com/pulse/os-algoritmos-e-estruturas-de-dados-mais-pedidos-em-barbosa-junior-kvzjf" target="_blank">Os Algoritmos e Estruturas de Dados Mais Pedidos em Entrevistas de Emprego – Prepare-se para seu Próximo Desafio!</a></li>
                 </ul>
             </div>
-        </div>
-    </nav>
+        </section>
 
-    <!-- Apresentação e Introdução -->
-    <section id="about" class="py-5 bg-light text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <img src="foto.jpg" alt="Foto Profissional" class="img-fluid rounded-circle mb-3" width="200">
-                </div>
-                <div class="col-md-8">
-                    <h2>Sobre Mim</h2>
-                    <p>
-                        Sou Carlos Alberto, um desenvolvedor Android apaixonado por criar soluções tecnológicas que fazem a diferença. Com uma sólida base em programação e administração, meu foco está em transformar ideias em aplicativos funcionais e inovadores. Tenho experiência prática em linguagens como Kotlin, Java e Python, além de conhecimentos em inteligência artificial.
-                    </p>
-                    
-                    <p>
-                        Adoro aprender coisas novas e compartilhar o que aprendo, seja escrevendo artigos, desenvolvendo projetos no GitHub ou publicando livros. Acredito que a tecnologia tem o poder de transformar empresas e a vida das pessoas, e meu objetivo é contribuir para isso criando aplicativos que otimizem processos, aumentem lucros e reduzam custos.
-                    </p>
-                    
-                    <p>
-                        Quando não estou codando, você pode me encontrar estudando novas tendências tecnológicas ou planejando o próximo projeto que desafie minha criatividade e habilidades. Vamos criar algo incrível juntos?
-                    </p>
-                </div>
+        <!-- Demonstrações Interativas -->
+        <!-- 
+        <section id="videos" class="py-5 bg-light text-center">
+            <div class="container">
+                <h2 class="mb-4">Demonstrações Interativas</h2>
+                <p>Veja abaixo demonstrações dos meus projetos:</p>
+                <video controls width="320" class="mb-3">
+                    <source src="video_projeto1.mp4" type="video/mp4">
+                    Seu navegador não suporta o vídeo.
+                </video>
+                <video controls width="320" class="mb-3">
+                    <source src="video_projeto2.mp4" type="video/mp4">
+                    Seu navegador não suporta o vídeo.
+                </video>
             </div>
-        </div>
-    </section>
+        </section>
+        -->
 
-    <!-- Projetos Relevantes -->
-    <section id="projects" class="py-5 text-center">
-        <section id="about" class="py-5 bg-light text-center" data-aos="fade-up">
-        <div class="container">
-            <h2 class="mb-4">Projetos Relevantes</h2>
-            <div class="row">
-                <!-- Projeto 1 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="MaximizingRevenues/maximizando2.png" class="card-img-top" alt="Projeto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">Maximizando Receita</h5>
-                            <p class="card-text">
-                                
-                                <p>Este aplicativo foi desenvolvido com base no curso <strong>"Inteligência Artificial para Empresas e Negócios"</strong>, ministrado por Jones Granatyr.</p>
-            <p>O curso ensina como maximizar a receita de um negócio online utilizando o algoritmo <strong>Thompson Sampling</strong>, alcançando um retorno de mais de 100% em comparação com estratégias que não utilizam inteligência artificial.</p>
-                                                           
-                            <a href="MaximizingRevenues.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+        <!-- Livros Publicados -->
+        <section id="books" class="py-5 bg-light text-center">
+            <div class="container">
+                <h2 class="mb-4">Livros Publicados</h2>
+                <p>Abaixo estão alguns dos livros que escrevi e publiquei na Amazon:</p>
+                <div class="row">
+                    <!-- Livro 1 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <img src="Livro/Android e Kotlin Da Teoria à Prática em Arquitetura Limpa.jpg" class="card-img-top" alt="Android e Kotlin: Da Teoria à Prática em Arquitetura Limpa">
+                            <div class="card-body">
+                                <h5 class="card-title">Android e Kotlin: Da Teoria à Prática em Arquitetura Limpa</h5>
+                                <p class="card-text">
+
+                                <p>Embarque em uma jornada completa para dominar o desenvolvimento Android com este guia essencial que revela os segredos para construir aplicativos robustos e escaláveis.</p>
+                                <p>Este livro combina teoria e prática, com exemplos detalhados em Kotlin e baseados nas melhores práticas de código limpo e princípios S.O.L.I.D.</p>
+
+                                <a href="livroAndroidKotlin.html" class="btn btn-primary" target="_blank">Ver Detalhes do Livro</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Projeto 2 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="minimizingCosts/minimizingCosts2.png" class="card-img-top" alt="Projeto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Minimizando Custos</h5>
-                            
-                            <p class="card-text">
-                                
-                                <p>Este aplicativo simula um ambiente de gestão empresarial, onde o objetivo é minimizar custos e maximizar receitas.</p>
-            <p>Utilizando Inteligência Artificial (Thompson Sampling), o aplicativo automatiza a tomada de decisões em controle de estoque, promoções, produção e gestão financeira. Ele também permite estratégias manuais para comparação.</p>
-                            
-                            <a href="minimizingCosts.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+
+                    <!-- Livro 2 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <img src="Livro/Matematica AI.jpg" class="card-img-top" alt="Matemática Essencial para Deep Learning eBook Kindle">
+                            <div class="card-body">
+                                <h5 class="card-title">Matemática Essencial para Deep Learning</h5>
+                                <p class="card-text">Descrição do outro livro publicado.</p>
+                                <p>O que faz uma rede neural realmente aprender? A resposta está na matemática.</p>
+                                <p></p>
+                                <p>Enquanto muitos livros ensinam o uso de frameworks como TensorFlow e PyTorch, poucos explicam a matemática que realmente dá poder a essas ferramentas. É essa lacuna que este livro busca preencher.</p>
+                                <p></p>
+                                <p>Aqui, você não apenas aprenderá como redes neurais funcionam, mas entenderá por que elas funcionam. De forma clara e acessível, exploraremos os fundamentos matemáticos que tornam possível o treinamento e a otimização de modelos inteligentes.</p>
+                                <p></p>
+                                <p>Você descobrirá como conceitos como álgebra linear, cálculo diferencial e estatística são aplicados diretamente no deep learning, permitindo que máquinas reconheçam padrões, façam previsões e tomem decisões com precisão impressionante.</p>
+
+                                <a href="LivroMatematicaAI.html" class="btn btn-primary" target="_blank">Ver Detalhes do Livro</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Projeto 3 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="chatbot/chatbot.png" class="card-img-top" alt="Projeto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Chatbot with Albert</h5>
-                            
-                            <p class="card-text">
-                                
-                                <p>O <strong>Chatbot with Albert</strong> é um aplicativo inovador que traz a funcionalidade de um chatbot autônomo diretamente para o dispositivo Android, eliminando a necessidade de um servidor ou conexão com a internet.</p>
-            <p>Com ele, empresas podem oferecer respostas rápidas e precisas aos seus clientes, configurando um texto de referência personalizado.</p>                                
-                                
-                            <a href="chatbotAlbert.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+
+                    <!-- Livro 3 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <img src="Livro/Testes para Android Studio Guia Prático e Completo.jpg" class="card-img-top" alt="ASP.NET Descomplicado: Tudo que Você Precisa Saber sobre Desenvolvimento Web com .NET">
+                            <div class="card-body">
+                                <h5 class="card-title">Testes para Android Studio: Guia Prático e Completo</h5>
+                                <p class="card-text">
+
+                                <p>Descubra o poder dos testes unitários no desenvolvimento Android com "Testes para Android Studio: Guia Prático e Completo". 
+                                    Este livro essencial aborda desde os fundamentos até as melhores práticas, garantindo que você domine a arte de testar métodos, 
+                                    classes e funções de forma isolada.</p>
+                                <p></p>
+                                <p>Por que este livro é indispensável?</p>
+                                <p>- Detecção Precoce de Bugs: Aprenda a identificar e corrigir erros logo no início do ciclo de desenvolvimento, evitando problemas maiores no futuro.</p>
+                                <p>- Confiança no Código: Implemente testes que funcionam como uma rede de segurança, permitindo refatorações e adições de funcionalidades sem receios.</p>
+                                <p></p>
+                                <p>Com exemplos práticos e explicações claras, este guia é ideal tanto para iniciantes quanto para desenvolvedores experientes que 
+                                    desejam aprimorar suas habilidades em testes no Android Studio. Garanta a robustez e a qualidade do seu aplicativo com este recurso indispensável.</p>
+
+                                <a href="LivroTesteAndroid.html" class="btn btn-primary" target="_blank">Ver Detalhes do Livro</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Projetos da próxima linha -->
-            <div class="row">
-                <!-- Projeto 4 -->
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="Interactus/interactus02.png" class="card-img-top" alt="Projeto 1">
-                        <div class="card-body">
-                            <h5 class="card-title">WhatsApp Clone for Android</h5>
-                            <p class="card-text">
-                                
-                                <p>O aplicativo replica as principais funcionalidades do WhatsApp</p>
-            <p>Este projeto é um clone funcional do WhatsApp, desenvolvido inicialmente como parte do curso "Desenvolvimento Android Completo - Crie 18 Apps" de Jamilton Damasceno na Udemy.</p>
-                                                           
-            <a href="Interactus.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
+
+
+                    <!-- Livro 4 -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <img src="Livro/ASP.NET.jpg" class="card-img-top" alt="Testes para Android Studio: Guia Prático e Completo">
+                            <div class="card-body">
+                                <h5 class="card-title">ASP.NET Descomplicado: Tudo que Você Precisa Saber sobre Desenvolvimento Web com .NET</h5>
+                                <p class="card-text">
+
+                                <p>Você quer dominar o desenvolvimento web moderno com ASP.NET?</p>
+                                <p>Este livro é a chave para transformar seu conhecimento em aplicações reais, escaláveis e seguras usando o ecossistema .NET.</p>
+                                <p>Neste guia completo, você aprenderá:</p>
+                                <p>- Como funciona a arquitetura MVC no ASP.NET Core</p>
+                                <p>- Como usar Razor Pages para construir interfaces dinâmicas</p>
+                                <p>- Integração com bancos de dados usando Entity Framework</p>
+                                <p>Ideal tanto para desenvolvedores iniciantes quanto para quem já tem experiência com C# e quer entrar no mundo web com ASP.NET Core.</p>
+
+                                <a href="LivroASPNET.html" class="btn btn-primary" target="_blank">Ver Detalhes do Livro</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!-- Projeto 5 -->
-                <!--
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="minimizingCosts/minimizingCosts2.png" class="card-img-top" alt="Projeto 2">
-                        <div class="card-body">
-                            <h5 class="card-title">Minimizando Custos</h5>
-                            
-                            <p class="card-text">
-                                
-                                <p>Este aplicativo simula um ambiente de gestão empresarial, onde o objetivo é minimizar custos e maximizar receitas.</p>
-            <p>Utilizando Inteligência Artificial (Thompson Sampling), o aplicativo automatiza a tomada de decisões em controle de estoque, promoções, produção e gestão financeira. Ele também permite estratégias manuais para comparação.</p>
-                            
-                            <a href="minimizingCosts.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
-                        </div>
-                    </div>
-                </div>
-                -->
-                <!-- Projeto 6 -->
-                <!--
-                <div class="col-md-4 mb-4">
-                    <div class="card">
-                        <img src="chatbot/chatbot.png" class="card-img-top" alt="Projeto 3">
-                        <div class="card-body">
-                            <h5 class="card-title">Chatbot with Albert</h5>
-                            
-                            <p class="card-text">
-                                
-                                <p>O <strong>Chatbot with Albert</strong> é um aplicativo inovador que traz a funcionalidade de um chatbot autônomo diretamente para o dispositivo Android, eliminando a necessidade de um servidor ou conexão com a internet.</p>
-            <p>Com ele, empresas podem oferecer respostas rápidas e precisas aos seus clientes, configurando um texto de referência personalizado.</p>                                
-                                
-                            <a href="chatbotAlbert.html" class="btn btn-primary" target="_blank">Ver Projeto</a>
-                        </div>
-                    </div>
+
+
                 </div>
             </div>
-            -->
-            
-            
-            
-        </div>
-            </section>
-    </section>
+        </section>
 
-    <!-- Habilidades -->
-    <section id="skills" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2 class="mb-4">Habilidades Técnicas</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <h5>Linguagens de Programação</h5>
-                    <p>Python, Kotlin, Java, C/C++, C#, Dart</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Frameworks</h5>
-                    <p>Tensorflow, ASP.NET, Bootstrap, Flutter</p>
-                </div>
-                <div class="col-md-4">
-                    <h5>Ferramentas</h5>
-                    <p>Git, Docker</p>
-                </div>
+
+        <!-- Redes Sociais -->
+        <section id="social" class="py-5 text-center">
+            <div class="container">
+                <h2 class="mb-4">Redes Sociais</h2>
+                <p>Conecte-se comigo:</p>
+                <a href="https://www.linkedin.com/in/calbertobarbosajr/" class="btn btn-outline-primary me-2" target="_blank">LinkedIn</a>
+                <a href="https://github.com/calbertobarbosajr" class="btn btn-outline-dark me-2" target="_blank">GitHub</a>
+                <!-- <a href="calbertobarbosajr@gmail.com" class="btn btn-outline-primary" target="_blank">E-mail</a> -->
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Artigos -->
-    <section id="articles" class="py-5 text-center">
-        <div class="container">
-            <h2 class="mb-4">Artigos Técnicos</h2>
-            <p>Confira meus artigos na plataforma LinkedIn:</p>
-            <ul class="list-unstyled">
-                <li><a href="https://www.linkedin.com/pulse/desvendando-os-mist%25C3%25A9rios-dos-coment%25C3%25A1rios-c-da-arte-de-barbosa-junior/?trackingId=6BgbnkzwSjWV0xqi1CM80w%3D%3D" target="_blank">Escrevendo Código de Alta Qualidade: Impacto, Padrões e Princípios</a></li>
-                <li><a href="https://www.linkedin.com/pulse/dominando-programa%25C3%25A7%25C3%25A3o-orientada-objetos-da-teoria-%25C3%25A0-barbosa-junior-mux2f/?trackingId=u33wvrZmQIaFRpkmTNXvVA%3D%3D" target="_blank">Dominando a Programação Orientada a Objetos: Da Teoria à Prática em Projetos Reais</a></li>
-                <li><a href="https://www.linkedin.com/pulse/desvendando-arquitetura-limpa-desenvolvimento-android-barbosa-junior-hnrhf/?trackingId=u33wvrZmQIaFRpkmTNXvVA%3D%3D
-" target="_blank">
-                        Desvendando a Arquitetura Limpa no Desenvolvimento Android: Uma Revolução para o Sucesso</a></li>
-                <li><a href="https://www.linkedin.com/pulse/os-algoritmos-e-estruturas-de-dados-mais-pedidos-em-barbosa-junior-kvzjf" target="_blank">Os Algoritmos e Estruturas de Dados Mais Pedidos em Entrevistas de Emprego – Prepare-se para seu Próximo Desafio!</a></li>
-            </ul>
-        </div>
-    </section>
+        <!-- Footer -->
+        <footer class="bg-dark text-white text-center py-3">
+            <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+        </footer>
 
-    <!-- Demonstrações Interativas -->
-    <!-- 
-    <section id="videos" class="py-5 bg-light text-center">
-        <div class="container">
-            <h2 class="mb-4">Demonstrações Interativas</h2>
-            <p>Veja abaixo demonstrações dos meus projetos:</p>
-            <video controls width="320" class="mb-3">
-                <source src="video_projeto1.mp4" type="video/mp4">
-                Seu navegador não suporta o vídeo.
-            </video>
-            <video controls width="320" class="mb-3">
-                <source src="video_projeto2.mp4" type="video/mp4">
-                Seu navegador não suporta o vídeo.
-            </video>
-        </div>
-    </section>
-    -->
-    
-    <!-- Livros Publicados -->
-<section id="books" class="py-5 bg-light text-center">
-    <div class="container">
-        <h2 class="mb-4">Livros Publicados</h2>
-        <p>Abaixo estão alguns dos livros que escrevi e publiquei na Amazon:</p>
-        <div class="row">
-            <!-- Livro 1 -->
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <img src="Livro/Android e Kotlin Da Teoria à Prática em Arquitetura Limpa.jpg" class="card-img-top" alt="Título do Livro">
-                    <div class="card-body">
-                        <h5 class="card-title">Android e Kotlin: Da Teoria à Prática em Arquitetura Limpa</h5>
-                        <p class="card-text">
-                            
-                            <p>Embarque em uma jornada completa para dominar o desenvolvimento Android com este guia essencial que revela os segredos para construir aplicativos robustos e escaláveis.</p>
-                    <p>Este livro combina teoria e prática, com exemplos detalhados em Kotlin e baseados nas melhores práticas de código limpo e princípios S.O.L.I.D.</p>
-                    
-                        <a href="livroAndroidKotlin.html" class="btn btn-primary" target="_blank">Ver Detalhes do Livro</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Outro Livro (opcional) -->
-            
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <img src="Livro/Matematica AI.jpg" class="card-img-top" alt="Título do Livro">
-                    <div class="card-body">
-                        <h5 class="card-title">Matemática Essencial para Deep Learning eBook Kindle</h5>
-                        <p class="card-text">Descrição do outro livro publicado.</p>
-                        <p>O que faz uma rede neural realmente aprender? A resposta está na matemática.</p>
-                        <p></p>
-                        <p>Enquanto muitos livros ensinam o uso de frameworks como TensorFlow e PyTorch, poucos explicam a matemática que realmente dá poder a essas ferramentas. É essa lacuna que este livro busca preencher.</p>
-                        <p></p>
-                        <p>Aqui, você não apenas aprenderá como redes neurais funcionam, mas entenderá por que elas funcionam. De forma clara e acessível, exploraremos os fundamentos matemáticos que tornam possível o treinamento e a otimização de modelos inteligentes.</p>
-                        <p></p>
-                        <p>Você descobrirá como conceitos como álgebra linear, cálculo diferencial e estatística são aplicados diretamente no deep learning, permitindo que máquinas reconheçam padrões, façam previsões e tomem decisões com precisão impressionante.</p>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true
+            });
+        </script>
 
-                        <a href="LivroMatematicaAI.html" class="btn btn-primary" target="_blank">Ver Detalhes do Livro</a>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-
-    <!-- Redes Sociais -->
-    <section id="social" class="py-5 text-center">
-        <div class="container">
-            <h2 class="mb-4">Redes Sociais</h2>
-            <p>Conecte-se comigo:</p>
-            <a href="https://www.linkedin.com/in/calbertobarbosajr/" class="btn btn-outline-primary me-2" target="_blank">LinkedIn</a>
-            <a href="https://github.com/calbertobarbosajr" class="btn btn-outline-dark me-2" target="_blank">GitHub</a>
-            <!-- <a href="calbertobarbosajr@gmail.com" class="btn btn-outline-primary" target="_blank">E-mail</a> -->
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
-    </footer>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script>
-    AOS.init({
-        duration: 1000, // Duração da animação em milissegundos
-        once: true      // A animação ocorre uma única vez ao rolar
-    });
-</script>
-
-</body>
+    </body>
 </html>

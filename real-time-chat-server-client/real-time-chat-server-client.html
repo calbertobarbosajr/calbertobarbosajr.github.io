@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat em Tempo Real - Cliente & Servidor</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <style>
+    .carousel-item img {
+      max-height: 400px;
+      object-fit: contain;
+      width: 100%;
+    }
+    iframe {
+      max-width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+  <div class="container">
+      <a class="navbar-brand" href="../index.html">Portfólio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#descricao">Descrição</a></li>
+        <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#video">Demonstração</a></li>
+        <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Descrição -->
+<section id="descricao" class="py-5 bg-light text-center">
+  <div class="container">
+    <h2 class="mb-4">Chat em Tempo Real - Cliente & Servidor</h2>
+    <p>Este projeto demonstra a comunicação de rede entre um <strong>cliente Android</strong> e um <strong>servidor TCP escrito em C</strong>, utilizando apenas recursos nativos de cada linguagem.</p>
+    <p>Foi desenvolvido para fins educacionais, mostrando como implementar um sistema de mensagens em tempo real sem uso de frameworks ou bibliotecas externas.</p>
+  </div>
+</section>
+
+<!-- Funcionalidades -->
+<section id="funcionalidades" class="py-5 text-center">
+  <div class="container">
+    <h3 class="mb-4">Funcionalidades do Projeto</h3>
+    <ul class="list-unstyled">
+      <li>🖥️ <strong>Servidor C (TCP):</strong> Utiliza API de sockets para gerenciar múltiplos clientes.</li>
+      <li>📱 <strong>Cliente Android (Kotlin):</strong> Interface simples para enviar e receber mensagens.</li>
+      <li>🔄 Comunicação bidirecional em tempo real via sockets.</li>
+      <li>✅ 100% baseado em código nativo: sem frameworks de terceiros.</li>
+    </ul>
+    <a href="servidorTCP.html" target="_blank">Ver detalhes do servidor</a>
+
+  </div>
+</section>
+
+<!-- Demonstração Interativa -->
+<section id="video" class="py-5 bg-light text-center">
+  <div class="container">
+    <h3 class="mb-4">Demonstração do Funcionamento</h3>
+    <div class="ratio ratio-16x9 mx-auto" style="max-width: 720px;">
+      <iframe src="https://www.youtube.com/embed/a_pSmMwX3h4" title="Demonstração Chat TCP Android e C" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- GitHub -->
+<section id="github" class="py-5 text-center">
+  <div class="container">
+    <h3 class="mb-4">Código-Fonte no GitHub</h3>
+    <p>Confira o repositório com todos os arquivos do servidor e cliente Android:</p>
+    <a href="https://github.com/calbertobarbosajr/real-time-chat-server-client" class="btn btn-dark" target="_blank">Ver no GitHub</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

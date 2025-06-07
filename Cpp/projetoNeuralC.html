@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simulador Neural em C++</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    .project-img {
+      max-height: 400px;
+      object-fit: contain;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Meu Portfólio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#projects">Projetos</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Detalhes do Projeto -->
+<section class="py-5 text-center bg-light">
+  <div class="container" data-aos="fade-down">
+    <h1 class="mb-4">Simulador Neural em C++</h1>
+    <img src="C_C++/neural_simulation.png" alt="Imagem do Simulador Neural em C++" class="project-img">
+    <p class="lead">Projeto de rede neural simples construído apenas com C++ moderno, sem frameworks externos. Ideal para demonstrar o funcionamento interno de camadas neurais e backpropagation básico.</p>
+  </div>
+</section>
+
+<!-- Informações Técnicas -->
+<section class="py-5">
+  <div class="container" data-aos="fade-up">
+    <h3>Características Técnicas</h3>
+    <ul class="list-unstyled">
+      <li>✅ Linguagem: C++ (C++17)</li>
+      <li>✅ Treinamento usando algoritmo de backpropagation manual</li>
+      <li>✅ Estrutura de camadas (neurônios artificiais) modeladas diretamente</li>
+      <li>✅ Operações de Matriz e Vetor implementadas "na mão"</li>
+      <li>✅ Projeto 100% sem bibliotecas externas</li>
+    </ul>
+
+    <h3 class="mt-5">Tecnologias Utilizadas</h3>
+    <ul class="list-unstyled">
+      <li>🔹 C++ Standard Library (STL)</li>
+      <li>🔹 Visual Studio Code / CLion / GCC</li>
+      <li>🔹 Linux Ubuntu 22.04 e Windows 11</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Fluxo de Execução -->
+<section class="py-5 bg-light">
+  <div class="container" data-aos="fade-up">
+    <h3>Como Funciona?</h3>
+    <ol>
+      <li>Inicializa pesos e biases aleatórios.</li>
+      <li>Calcula o output forward das camadas.</li>
+      <li>Calcula o erro entre previsão e valor real.</li>
+      <li>Atualiza pesos com algoritmo de retropropagação.</li>
+      <li>Repete o treinamento por N épocas para melhorar a precisão.</li>
+    </ol>
+  </div>
+</section>
+
+<!-- Link para o GitHub -->
+<section class="py-5 text-center">
+  <div class="container" data-aos="zoom-in">
+    <h3>Repositório no GitHub</h3>
+    <p>Veja o código-fonte completo deste projeto no GitHub:</p>
+    <a href="https://github.com/seu-usuario/projetoNeuralC" class="btn btn-dark" target="_blank">Ver Projeto no GitHub</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+  <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+
+</body>
+</html>
