@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TMDb App – Catálogo de Filmes com Jetpack Compose</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body { scroll-behavior: smooth; }
+    header.hero {
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      color: #fff;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 { font-weight: 700; }
+    section { padding: 60px 0; }
+    .card-tech { border: 0; transition: transform 0.2s; }
+    .card-tech:hover { transform: translateY(-5px); }
+    footer { background: #212529; color: #fff; }
+    .gallery img { border-radius: 10px; cursor: pointer; transition: 0.3s; }
+    .gallery img:hover { opacity: 0.8; transform: scale(1.02); }
+    @media (max-width: 768px) {
+      .hero { padding: 60px 10px; }
+      .hero h1 { font-size: 1.8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="../index.html">Portfólio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#sobre">Sobre</a></li>
+        <li class="nav-item"><a class="nav-link" href="#arquitetura">Arquitetura</a></li>
+        <li class="nav-item"><a class="nav-link" href="#tecnologias">Tecnologias</a></li>
+        <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link" href="#github">GitHub</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="container">
+    <h1 class="display-5 mb-3">🎬 TMDb App</h1>
+    <p class="lead mb-4">Catálogo de Filmes desenvolvido com Kotlin, Jetpack Compose, Retrofit e Koin</p>
+    <a href="#github" class="btn btn-light btn-lg me-2"><i class="bi bi-github"></i> Ver no GitHub</a>
+  </div>
+</header>
+
+<!-- Sobre -->
+<section id="sobre" class="bg-light text-center">
+  <div class="container">
+    <h2 class="mb-4">🧠 Sobre o Projeto</h2>
+    <p class="lead">
+      O <strong>TMDb App</strong> é um aplicativo Android moderno que consome a API do The Movie Database (TMDb)
+      para exibir filmes populares, trailers e informações detalhadas.
+    </p>
+    <p>
+      Desenvolvido com foco em boas práticas de arquitetura, desempenho e escalabilidade, utilizando as
+      principais bibliotecas do ecossistema Android.
+    </p>
+  </div>
+</section>
+
+<!-- Arquitetura -->
+<section id="arquitetura">
+  <div class="container">
+    <h2 class="text-center mb-4">🏗️ Arquitetura</h2>
+    <p class="text-center mb-4">
+      O projeto segue o padrão <strong>MVVM (Model–View–ViewModel)</strong> combinado com o <strong>Repository Pattern</strong>.
+    </p>
+    <div class="table-responsive">
+      <table class="table table-striped align-middle text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>Camada</th>
+            <th>Responsabilidade</th>
+            <th>Tecnologias</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Model</td><td>Representa os dados da API e do banco local</td><td>data class, Room, Retrofit</td></tr>
+          <tr><td>Repository</td><td>Media o acesso entre API e banco local</td><td>MoviesRepository, FavoriteMovieDao</td></tr>
+          <tr><td>ViewModel</td><td>Controla a lógica e estados da UI</td><td>MoviesViewModel, FavoritesViewModel</td></tr>
+          <tr><td>View (UI)</td><td>Exibição das telas</td><td>Jetpack Compose</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Tecnologias -->
+<section id="tecnologias" class="bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">🧰 Principais Tecnologias e Conceitos</h2>
+
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col">
+        <div class="card card-tech shadow-sm p-3 h-100">
+          <h5>🎨 Jetpack Compose</h5>
+          <ul class="list-unstyled text-start mt-2">
+            <li>UI declarativa moderna</li>
+            <li>Uso de <code>LazyColumn</code>, <code>remember</code>, <code>LaunchedEffect</code> e <code>State</code></li>
+            <li>Componentes customizados e animados</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-tech shadow-sm p-3 h-100">
+          <h5>🌐 Retrofit + Coroutines</h5>
+          <ul class="list-unstyled text-start mt-2">
+            <li>Consumo da API TMDb com <code>suspend fun</code></li>
+            <li>Chamadas assíncronas otimizadas</li>
+            <li>Conversão JSON automática via Gson</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-tech shadow-sm p-3 h-100">
+          <h5>💾 Room + Flow</h5>
+          <ul class="list-unstyled text-start mt-2">
+            <li>Persistência local de favoritos</li>
+            <li>UI reativa com <code>Flow&lt;List&lt;FavoriteMovie&gt;&gt;</code></li>
+            <li>Atualização automática de estados</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-tech shadow-sm p-3 h-100">
+          <h5>📜 Paging 3</h5>
+          <ul class="list-unstyled text-start mt-2">
+            <li>Paginação eficiente de filmes</li>
+            <li>Carregamento incremental</li>
+            <li>Integração com Compose via <code>collectAsLazyPagingItems()</code></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-tech shadow-sm p-3 h-100">
+          <h5>🧠 Koin</h5>
+          <ul class="list-unstyled text-start mt-2">
+            <li>Injeção de dependência modularizada</li>
+            <li>Evita acoplamento e facilita testes</li>
+            <li>Módulos: <em>networkModule, databaseModule, repositoryModule, viewModelModule</em></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card-tech shadow-sm p-3 h-100">
+          <h5>⚡ Kotlin Coroutines + Flow</h5>
+          <ul class="list-unstyled text-start mt-2">
+            <li>Processamento assíncrono eficiente</li>
+            <li><code>LaunchedEffect</code> e <code>viewModelScope.launch</code></li>
+            <li><code>async/await</code> para requisições paralelas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Funcionalidades -->
+<section id="funcionalidades">
+  <div class="container text-center">
+    <h2 class="mb-4">🚀 Principais Funcionalidades</h2>
+    <ul class="list-group list-group-flush text-start mx-auto" style="max-width: 700px;">
+      <li class="list-group-item">✅ Listagem de filmes populares com paginação (Paging 3)</li>
+      <li class="list-group-item">✅ Tela de detalhes com sinopse, nota e trailer do YouTube</li>
+      <li class="list-group-item">✅ Botão de “Favoritar” com animação (Room + Flow)</li>
+      <li class="list-group-item">✅ Compartilhamento de trailer</li>
+      <li class="list-group-item">✅ Tela de “Favoritos” atualizada em tempo real</li>
+      <li class="list-group-item">✅ Injeção de dependência completa com Koin</li>
+      <li class="list-group-item">✅ Consumo otimizado da API com Retrofit + Coroutines</li>
+    </ul>
+  </div>
+</section>
+
+<!-- Galeria -->
+<section id="galeria" class="bg-light text-center">
+  <div class="container">
+    <h2 class="mb-4">🖼️ Galeria do Aplicativo</h2>
+    <div class="row gallery g-4 justify-content-center">
+      <div class="col-10 col-sm-6 col-md-4">
+          <img src="ArsCinematica/ArsCinematica01.png" alt="Tela inicial do app" class="img-fluid shadow" data-bs-toggle="modal" data-bs-target="#modalImg1">
+      </div>
+      <div class="col-10 col-sm-6 col-md-4">
+        <img src="ArsCinematica/ArsCinematica02.png" alt="Detalhes do filme" class="img-fluid shadow" data-bs-toggle="modal" data-bs-target="#modalImg2">
+      </div>
+      <div class="col-10 col-sm-6 col-md-4">
+        <img src="ArsCinematica/ArsCinematica03.png" alt="Tela de favoritos" class="img-fluid shadow" data-bs-toggle="modal" data-bs-target="#modalImg3">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Modais -->
+<div class="modal fade" id="modalImg1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <img src="img/tmdb-1.jpg" class="img-fluid rounded">
+  </div>
+</div>
+<div class="modal fade" id="modalImg2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <img src="img/tmdb-2.jpg" class="img-fluid rounded">
+  </div>
+</div>
+<div class="modal fade" id="modalImg3" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <img src="img/tmdb-3.jpg" class="img-fluid rounded">
+  </div>
+</div>
+
+<!-- GitHub -->
+<section id="github" class="text-center">
+  <div class="container">
+    <h2 class="mb-4">📦 Repositório no GitHub</h2>
+    <p>Confira o código-fonte completo do projeto:</p>
+    <a href="https://github.com/calbertobarbosajr/ArsCinematica" class="btn btn-dark btn-lg" target="_blank">
+      <i class="bi bi-github"></i> Ver Projeto no GitHub
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-3">
+  <p>&copy; 2025 Carlos Alberto Barbosa Junior. Todos os direitos reservados.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
